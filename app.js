@@ -68,3 +68,80 @@
 
 
 // 7
+// function removeFalsyValues(obj) {
+//     let result = {}; {
+//     }
+
+//     Object.keys(obj).forEach(key => {
+//         if (obj[key])
+//             result[key] = obj[key];
+//     })
+//     return result;
+// }
+// const input = { a: false, b: 12, c: true, d: 0 };
+// const output = removeFalsyValues(input);
+// console.log(output);
+
+// 8
+// function countOccurrences(arr) {
+//     let result = {};
+//     arr.forEach(num => {
+//         if (result[num]) {
+//             result[num]++;
+//         }else{
+//             result[num] = 1;
+//         }
+//     });
+//     return result;
+// }
+
+// const input = [7, 8, 4, 5, 7, 5, 4, 8, 5, 4, 7, 9];
+// const output = countOccurrences(input);
+// console.log(output);
+
+// 9
+// function splitNumber(num){
+//     const numStr = num.toString();
+//     const result = {};
+
+//     result.birlik = numStr.slice(-3);
+//     result.minglik = numStr.slice(-6, -3);
+//     result.millionlik = numStr.slice(-9, -6);
+//     result.milliardlik = numStr.slice(-12, -9);
+//     result.trilionlik = numStr.slice(-15,-12)
+//     return result; 
+
+// }
+
+// const input = 8945472985629;
+// const output = splitNumber(input);
+// console.log(output);
+
+
+
+// 10
+// const books = [
+//     {
+//       title: "Halqa",
+//       author: "Akrom Malik",
+//       alreadyRead: false,
+//     },
+//     {
+//       title: "Dunyo ishlari",
+//       author: "O'tkir Hoshimov",
+//       alreadyRead: true,
+//     },
+//     {
+//       title: "Vaqtning qadri",
+//       author: "Abdulfattoh Abu G'udda",
+//       alreadyRead: false,
+//     },
+//   ];
+  
+//   books.forEach((book, index) => {
+//     const readStatus = book.alreadyRead ? "o'qilgan" : "o'qilmagan";
+//     console.log(`${index + 1}. ${book.author}ning "${book.title}" kitobi ${readStatus};`);
+//   });
+  
+
+// 11
