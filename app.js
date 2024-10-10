@@ -145,3 +145,243 @@
   
 
 // 11   
+
+// const products = [
+//     { name: "Product 1", price: 20000, discount: 10, quantity: 5 },
+//     { name: "Product 2", price: 10000, discount: 20, quantity: 4 },
+//     { name: "Product 3", price: 15000, discount: 8, quantity: 10 },
+//     { name: "Product 4", price: 18000, discount: 5, quantity: 6 },
+//     { name: "Product 5", price: 5000, discount: 10, quantity: 16 },
+//   ];
+  
+//   let totalSum = 0;
+  
+//   products.forEach(product => {
+//     const discountedPrice = product.price * (1 - product.discount / 100);
+//     totalSum += discountedPrice * product.quantity;
+//   });
+  
+//   console.log(`Umumiy summa: ${totalSum} so'm`);
+  
+// 12
+// const obj = {
+//     "it": 20,
+//     "mushuk": 10,
+//     "sigir": 200,
+//     "tovuq": 2
+//   };
+  
+//   const resultArray = Object.entries(obj).flat();
+  
+//   console.log(resultArray);
+  
+
+// 13 (Ishlap bilamdim)
+
+// 14
+// const rightAnswers = { 1: "B", 2: "A", 3: "C", 4: "D", 5: "B", 6: "C", 7: "A", 8: 'D', 9: "A", 10: "B" };
+// const myAnswers = { 1: "C", 2: "A", 3: "D", 4: "D", 5: "B", 6: "C", 7: "B", 8: "C", 9: "A", 10: "C" };
+
+// let correctCount = 0; 
+// let wrongCount = 0;
+
+// for (let question in rightAnswers) {
+//   if (myAnswers[question] === rightAnswers[question]) {
+//     correctCount++; 
+//   } else {
+//     wrongCount++; 
+//   }
+// }
+
+// console.log(`To'g'ri javoblar: ${correctCount}`);
+// console.log(`Noto'g'ri javoblar: ${wrongCount}`);
+
+
+
+// 15
+// const obj = { a: 2, b: 3, c: 4, d: 6 };
+
+// function getMultipleValues(n) {
+//   const result = {}; 
+  
+//   for (let key in obj) {
+//     result[key] = obj[key] * n; 
+//   }
+  
+//   return result; 
+// }
+
+// let n = 3;
+// const res = getMultipleValues(n);
+
+// console.log(res);
+
+
+// 16
+// const product = {
+//     name: "Iphone 14",
+//     company: {
+//       name: "Apple",
+//       price: "200 mlrd",
+//       founder: {
+//         firstName: "Steve",
+//         lastName: "Jobs",
+//         birthDate: 1950,
+//       },
+//     },
+//   };
+  
+//   const {
+//     name: productName,
+//     company: {
+//       name: companyName,
+//       price: companyPrice,
+//       founder: {
+//         firstName: founderFirstName,
+//         lastName: founderLastName,
+//         birthDate: founderBirthDate,
+//       },
+//     },
+//   } = product;
+  
+//   console.log(companyPrice);
+//   console.log(founderFirstName);  
+//   console.log(founderLastName);   
+//   console.log(founderBirthDate);  
+
+
+
+// 17 (Ishlay olmadim)
+
+// 18 (Chatgptdan foyydalanip ishsladm)
+
+// const students = [
+//     { name: "Shahzod", percent: 85 },
+//     { name: "Abdulaziz", percent: 90 },
+//     { name: "Munira", percent: 75 },
+//     { name: "Dilnoza", percent: 95 },
+//   ];
+  
+//   // Protsentlarning umumiy yig'indisini va o'rtacha qiymatini topamiz
+//   let totalPercent = 0;
+  
+//   students.forEach(student => {
+//     totalPercent += student.percent;
+//   });
+  
+//   const averagePercent = totalPercent / students.length;
+  
+//   // Yangi massivni baho (`grade`) va status bilan qaytaramiz
+//   const updatedStudents = students.map(student => {
+//     let grade;
+    
+//     // Protsentga qarab baho beramiz
+//     if (student.percent >= 90 && student.percent <= 100) {
+//       grade = 5;
+//     } else if (student.percent >= 80 && student.percent < 90) {
+//       grade = 4;
+//     } else if (student.percent >= 70 && student.percent < 80) {
+//       grade = 3;
+//     } else {
+//       grade = 2;
+//     }
+  
+//     return {
+//       ...student,
+//       status: student.percent >= 80 ? "passed" : "failed",
+//       grade: grade // Yangi property - baho
+//     };
+//   });
+  
+//   console.log(`O'rtacha protsent: ${averagePercent.toFixed(2)}`);
+//   console.log(updatedStudents);
+  
+
+// 19 (Chatgptdan oldim)
+// const students = [
+//     { name: "Shahzod", percent: 85 },
+//     { name: "Abdulaziz", percent: 90 },
+//     { name: "Munira", percent: 75 },
+//     { name: "Dilnoza", percent: 65 },
+//   ];
+  
+//   // Protsentlarning umumiy yig'indisini va o'rtacha qiymatini topamiz
+//   let totalPercent = 0;
+  
+//   students.forEach(student => {
+//     totalPercent += student.percent;
+//   });
+  
+//   const averagePercent = totalPercent / students.length;
+  
+//   // Yangi massivni baho (`grade`), status (`status`), va isPassed (`isPassed`) bilan qaytaramiz
+//   const updatedStudents = students.map(student => {
+//     let grade;
+//     let status;
+//     let isPassed;
+  
+//     // Protsentga qarab baho beramiz
+//     if (student.percent >= 90) {
+//       grade = 5;
+//     } else if (student.percent >= 80) {
+//       grade = 4;
+//     } else if (student.percent >= 70) {
+//       grade = 3;
+//     } else {
+//       grade = 2;
+//     }
+  
+//     // Protsentga qarab status beramiz
+//     if (student.percent >= 80) {
+//       status = "passed";
+//     } else {
+//       status = "failed";
+//     }
+  
+//     // Protsent 70 yoki undan katta bo'lsa true, aks holda false
+//     isPassed = student.percent >= 70;
+  
+//     return {
+//       ...student,
+//       status: status,     // Status qo'shish
+//       grade: grade,       // Baho qo'shish
+//       isPassed: isPassed  // isPassed qo'shish
+//     };
+//   });
+  
+//   console.log(`O'rtacha protsent: ${averagePercent.toFixed(2)}`);
+//   console.log(updatedStudents);
+  
+
+// 20
+// const pupils = [
+//     { name: "Elbek", protcent: 95 },
+//     { name: "Zafar", protcent: 78 },
+//     { name: "Aziz", protcent: 83 },
+//     { name: "Jasur", protcent: 88 },
+//     { name: "Bobur", protcent: 66 },
+//     { name: "Kamron", protcent: 75 },
+//   ];
+  
+//   let passedCount = 0;
+//   let failedCount = 0;
+  
+//   const updatedPupils = pupils.map(pupil => {
+//     let isPassed = pupil.protcent >= 70; 
+  
+//     if (isPassed) {
+//       passedCount++;
+//     } else {
+//       failedCount++;
+//     }
+  
+//     return {
+//       ...pupil,
+//       isPassed: isPassed
+//     };
+//   });
+  
+//   console.log(`Imtihondan o'tganlar soni: ${passedCount}`);
+//   console.log(`Imtihondan o'ta olmaganlar soni: ${failedCount}`);
+//   console.log(updatedPupils);
+  
